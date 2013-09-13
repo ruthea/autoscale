@@ -1,0 +1,8 @@
+---
+applications:
+- name: helloflask25
+  memory: 256M
+  instances: 1
+  host: helloflask25
+  domain: cfapps.io
+  path: .
