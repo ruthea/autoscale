@@ -1,8 +1,0 @@
----
-applications:
-- name: loadgen25
-  memory: 256M
-  instances: 1
-  host: loadgen25
-  domain: cfapps.io
-  path: .
