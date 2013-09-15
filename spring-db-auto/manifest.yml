@@ -1,7 +1,0 @@
----
-applications:
-- name: spring-db-auto
-  memory: 256M
-  instances: 1
-  host: spring-db-auto
-  path: target/spring-db-auto-1.0.0-BUILD-SNAPSHOT
