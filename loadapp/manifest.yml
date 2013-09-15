@@ -1,6 +1,7 @@
 ---
 applications:
 - name: loadgen25
+  buildpack: git://github.com/ephoning/heroku-buildpack-python.git
   memory: 256M
   instances: 1
   host: loadgen25

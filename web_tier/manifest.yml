@@ -1,6 +1,7 @@
 ---
 applications:
 - name: helloflask25
+  buildpack: git://github.com/ephoning/heroku-buildpack-python.git
   memory: 256M
   instances: 1
   host: helloflask25
