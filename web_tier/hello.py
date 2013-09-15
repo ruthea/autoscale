@@ -6,19 +6,25 @@ app = Flask(__name__)
 @app.route('/slow')
 def slow():
     for x in xrange(1, 1000000):
-     env = str(os.environ)
-    return '<h2>Very slow!!!</h2>'
+     env = os.environ
+     env2 = str(os.environ)
+    return str(env['PORT'])
 
 @app.route('/medium')
 def medium():
     for x in xrange(1, 100000):
-     env = str(os.environ)
-
-    return '<h2>medium</h2>'
+     env = os.environ
+     env2 = str(os.environ)
+    return str(env['PORT'])
 
 @app.route('/fast')
 def fast():
     for x in xrange(1, 10000):
-     env = str(os.environ)
+     env = os.environ
+     env2 = str(os.environ)
+    return str(env['PORT'])
 
-    return '<h2>fast</h2>' 
+@app.route('/env')
+def env():
+    env = os.environ
+    return str(env['VCAP_SERVICES'])

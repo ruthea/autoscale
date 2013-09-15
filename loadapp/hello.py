@@ -34,7 +34,7 @@ class MyThread ( threading.Thread ):
      nf = urllib.urlopen(url)
      page = nf.read()
      end = datetime.now()
-     r_time_str += str(start)[:-4] + ',' + str(end - start)[:-4] + '<br>'
+     r_time_str += str(start)[:-4] + ',' + str(page) + ',' + (str(end - start)[:-4])[5:] + '<br>'
      nf.close()
 
 
