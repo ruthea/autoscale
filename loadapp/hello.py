@@ -28,7 +28,7 @@ class MyThread ( threading.Thread ):
  def run (self):
      global r_time_str
      global thread_delay
-     url = 'http://helloflask25.cfapps.io/medium'
+     url = 'http://helloflask25.cfapps.io/fast'
      time.sleep (random.random()*thread_delay)
      start = datetime.now()
      nf = urllib.urlopen(url)
