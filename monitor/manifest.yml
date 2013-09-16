@@ -1,0 +1,9 @@
+---
+applications:
+- name: monitor
+  buildpack: git://github.com/ephoning/heroku-buildpack-python.git
+  memory: 256M
+  instances: 1
+  host: monitor25
+  domain: cfapps.io
+  path: .

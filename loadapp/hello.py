@@ -1,11 +1,13 @@
 import os
 from flask import Flask
 from flask import request
+from flask import render_template
 import urllib
 import time
 from datetime import datetime
 import threading
 import random
+
 
 r_time_str = ''
 num_threads = 5
@@ -79,3 +81,12 @@ def data():
      num_threads = tmp_num_threads
      response_str += 'Changed num_threads to ' + str(tmp_num_threads) + '<br>'
     return response_str
+
+@app.route('/hello/')
+@app.route('/hello/<name>')
+def hello(name=None):
+    return render_template('hello.html', name=name)
+@app.route('/jso/')
+def jso():
+    st = '{ "label": "USA","data": [[1999, 4.4], [2000, 3.7], [2001, 0.8], [2002, 1.6], [2003, 2.5], [2004, 3.6], [2005, 2.9], [2006, 2.8], [2007, 2.0], [2008, 1.1]] }'
+    return st
